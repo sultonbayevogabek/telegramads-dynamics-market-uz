@@ -22,7 +22,13 @@
     formData.append(`Foydalanuvchi ID`, statistics.userId);
     formData.append(`Timestamp`, statistics.time?.toString());
 
-    let response = await fetch('https://script.google.com/macros/s/AKfycbyBwv0ciJpp75xribjTiEpuGULQ3IEaz0tLXJDQZ1oTc8-Adm_kUEzbkMAkutwGwYRo3g/exec', {
+    let excel = 'https://script.google.com/macros/s/AKfycbyBwv0ciJpp75xribjTiEpuGULQ3IEaz0tLXJDQZ1oTc8-Adm_kUEzbkMAkutwGwYRo3g/exec'
+
+    if (window.location.href.includes('tgads')) {
+      excel = 'https://script.google.com/macros/s/AKfycbzGYIKvcQB7I3sjHyq75JQFStTgOGmpJvztzqg_mn7Cl3wHugfICWOsfux1aqpon2Ug/exec'
+    }
+
+    let response = await fetch(excel, {
       method: 'POST',
       body: formData
     })
