@@ -17,7 +17,6 @@
 
     formData.append('Ismi', user?.name);
     formData.append('Telefon raqami', user?.phone);
-    formData.append('Faoliyati', user?.specialty);
     formData.append(`Ro'yxatdan o'tgan vaqti`, user?.time);
     formData.append(`Foydalanuvchi ID`, statistics.userId);
     formData.append(`Timestamp`, statistics.time?.toString());

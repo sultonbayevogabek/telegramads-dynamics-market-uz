@@ -99,7 +99,6 @@ try {
     const submitButton = e.target.querySelector('[data-form-button]');
     const name = e.target.querySelector('#name').value.trim();
     const phone = e.target.querySelector('#phone').value?.replace(/[^0-9]/g, '');
-    const specialty = e.target.querySelector('#specialty').value;
 
     if (!name.length) {
       formAlert.textContent = 'Ismingizni kiriting';
@@ -122,7 +121,6 @@ try {
       localStorage.setItem('user', JSON.stringify({
         name,
         phone: '+998' + phone,
-        specialty,
         time: new Date().toLocaleString()
       }))
 
