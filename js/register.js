@@ -9,7 +9,7 @@
     joinButton.disabled = true;
     await statistics.onClickTgBtn();
     joinButton.disabled = false;
-    window.location.href = 'https://t.me/dildoratursunovaseminar';
+    window.location.href = 'https://t.me/dildortursunovamasterklas';
   })
 
   if (user && user?.name && user?.phone && user?.time) {
@@ -22,13 +22,7 @@
     formData.append(`Foydalanuvchi ID`, statistics.userId);
     formData.append(`Timestamp`, statistics.time?.toString());
 
-    let excel = 'https://script.google.com/macros/s/AKfycbyBwv0ciJpp75xribjTiEpuGULQ3IEaz0tLXJDQZ1oTc8-Adm_kUEzbkMAkutwGwYRo3g/exec'
-
-    if (window.location.href.includes('tgads')) {
-      excel = 'https://script.google.com/macros/s/AKfycbzGYIKvcQB7I3sjHyq75JQFStTgOGmpJvztzqg_mn7Cl3wHugfICWOsfux1aqpon2Ug/exec'
-    }
-
-    let response = await fetch(excel, {
+    let response = await fetch('https://script.google.com/macros/s/AKfycbwVO8u79pjvCz9sRPkfZ6_mbAEast_hsbURCTsf4C-iuTmtryCeHpZtiiCQimgVacdzXQ/exec', {
       method: 'POST',
       body: formData
     })
