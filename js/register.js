@@ -9,7 +9,7 @@
     joinButton.disabled = true;
     await statistics.onClickTgBtn();
     joinButton.disabled = false;
-    window.location.href = 'https://t.me/dildortursunovamasterklas';
+    window.location.href = 'https://t.me/+1nfE3YjeLz43Njky';
   })
 
   if (user && user?.name && user?.phone && user?.time) {
